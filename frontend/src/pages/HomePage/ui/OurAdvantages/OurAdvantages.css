@@ -1,0 +1,99 @@
+.our-advantages {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1);
+}
+
+.our-advantages-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: calc(var(--index) * .35);
+}
+
+.our-advantages-container-item {
+    background: #fff;
+    padding: calc(var(--index) * .5);
+    border-radius: calc(var(--index) * .5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .5);
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.1);
+    position: relative;
+}
+
+.our-advantages-container-item-blub {
+    position: absolute;
+    top: calc(var(--index) * 1.75);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: width .4s ease, height .4s ease;
+}
+
+.our-advantages-container-item-icon,
+.our-advantages-container-item h2,
+.our-advantages-container-item p,
+.our-advantages-container-item a {
+    position: relative;
+    z-index: 2;
+}
+
+.our-advantages-container-item a {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-top: calc(var(--index) * .65);
+    color: rgba(0, 0, 0, .5);
+}
+
+.our-advantages-container-item-icon {
+    background: var(--main-color);
+    width: clamp(60px, calc(var(--index) * 2.5), 150px);
+    height: clamp(60px, calc(var(--index) * 2.5), 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.our-advantages-container-item-icon img {
+    width: clamp(35px, calc(var(--index) * 1.5), 150px);
+}
+
+.our-advantages-container-item h2,
+.our-advantages-container-item p {
+    text-align: center;
+    transition: color .25s ease;
+}
+
+.our-advantages-container-item:hover .our-advantages-container-item-blub {
+    width: 500px;
+    height: 500px;
+}
+
+.our-advantages-container-item:hover h2,
+.our-advantages-container-item:hover p,
+.our-advantages-container-item:hover a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+@media (max-width: 1050px) {
+    .our-advantages-container {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: calc(var(--index) * .35);
+    }
+}

@@ -1,0 +1,1 @@
+export const moreLink = 'https://t.me/uaSearchWork'

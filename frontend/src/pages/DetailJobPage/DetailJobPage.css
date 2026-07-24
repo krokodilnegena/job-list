@@ -1,0 +1,175 @@
+.job-detail {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1.5);
+}
+
+.job-detail-hero {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1);
+}
+
+.job-detail-hero-grid-container {
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-column-gap: calc(var(--index) * 1.5);
+}
+
+.job-detail-hero-left-img {
+    max-height: calc(var(--index) * 12.5);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(var(--index) * .5);
+}
+
+.job-detail-hero-left-img img {
+    width: 100%;
+}
+
+.job-detail-hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .5);
+}
+
+
+
+
+
+
+
+.job-detail-advantages {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1);
+}
+
+.job-detail-advantages-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: calc(var(--index) * .5);
+    grid-row-gap: calc(var(--index) * .5);
+}
+
+.job-detail-advantages-con-item {
+    padding: calc(var(--index) * .5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .5);
+    border-radius: calc(var(--index) * .5);
+    border: 1px solid rgba(0,0,0, .1);
+}
+
+.job-detail-advantages-con-item h2,
+.job-detail-advantages-con-item p,
+.job-detail-advantages-con-item span {
+    text-align: center;
+}
+
+.job-detail-advantages-con-item-image {
+    width: clamp(50px, calc(var(--index) * 2), 150px);
+    overflow: hidden;
+    margin: 0 auto;
+    height: clamp(50px, calc(var(--index) * 2), 150px);
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+}
+
+.job-detail-advantages-con-item-image img {
+    width: clamp(50px, calc(var(--index) * 2), 150px);
+}
+
+
+
+
+
+
+.job-detail-description {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(30px, calc(var(--index) * 1), 100px);
+}
+
+.job-detail-description-item {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .5);
+}
+
+.job-detail-description-item p {
+    text-transform: uppercase;
+}
+
+.job-detail-description-item ul {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .2);
+}
+
+.job-detail-description-item ul li {
+    list-style: inside;
+}
+
+
+
+.job-detail-processing {
+    background: #DD020D;
+    padding: calc(var(--index) * .7);
+    border-radius: calc(var(--index) * .5);
+    display: flex;
+    gap: calc(var(--index) * .7);
+    flex-direction: column;
+}
+
+.job-detail-processing img {
+    width: 100%;
+}
+
+.job-detail-processing h1 {
+    color: var(--white);
+}
+
+
+.mobile-detail-roadmap {
+    display: none;
+}
+
+
+
+
+@media (max-width: 950px) {
+    .job-detail-hero-grid-container {
+        grid-template-columns: 1fr;
+        grid-row-gap: calc(var(--index) * 1);
+    }
+
+    .job-detail-hero-right a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 830px) {
+    .job-detail-advantages-con {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .job-detail-processing {
+        background: var(--main-color);
+    }
+
+    .desctop-detail-roadmap {
+        display: none;
+    }
+
+    .mobile-detail-roadmap {
+        display: block;
+    }
+}

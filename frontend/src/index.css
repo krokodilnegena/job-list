@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'r1';
+}
+
+
+:root {
+  --index: calc(1vh + 1vw);
+  --inner: -1;
+
+
+  --white: #f8f8f8;
+  --black: #000;
+  --main-color: #E4000D;
+  --blue-color: #0000BA;
+}
+
+@font-face {
+  font-family: 'r1';
+  src: url('./assets/fonts/regular.ttf');
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  transition: .3s all ease;
+}
+
+.content {
+  width: 52%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--index) * 1);
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+.logo-font-size {
+  font-size: calc(var(--index) * .9);
+}
+
+.tex-font-size {
+  font-size: clamp(15px, calc(var(--index) * .55), 40px);
+}
+
+.h1-hero-font-size {
+  font-size: clamp(35px, calc(var(--index) * 1.95), 200px);
+}
+
+.p-hero-font-size {
+  font-size: clamp(17px, calc(var(--index) * .7), 40px);
+}
+
+.p-job-list-font-size {
+  font-size: clamp(19px, calc(var(--index) * .75), 40px);
+}
+
+.font-size-1-9 {
+  font-size: clamp(38px, calc(var(--index) * 1.9), 200px);
+}
+
+.font-size-1-8 {
+  font-size: clamp(32px, calc(var(--index) * 1.8), 200px);
+}
+
+
+.font-size-1-7 {
+  font-size: calc(var(--index) * 1.7);
+}
+
+.font-size-1-5 {
+  font-size: clamp(28px, calc(var(--index) * 1.5), 200px);
+}
+
+.font-size-1-2 {
+  font-size: clamp(25px, calc(var(--index) * 1.2), 50px);
+}
+
+.font-size-0-85 {
+  font-size: clamp(22px, calc(var(--index) * .85), 50px);
+}
+
+.font-size-0-8 {
+  font-size: clamp(21px, calc(var(--index) * .8), 50px);
+}
+
+.font-size-0-7 {
+  font-size: clamp(17px, calc(var(--index) * .7), 40px);
+}
+
+.font-size-0-65 {
+  font-size: clamp(16px, calc(var(--index) * .65), 40px);
+}
+
+.font-size-0-6 {
+  font-size: clamp(15px, calc(var(--index) * .6), 40px);
+}
+
+.font-size-0-55 {
+  font-size: clamp(14px, calc(var(--index) * .55), 40px);
+}
+
+.font-size-0-5 {
+  font-size: clamp(13px, calc(var(--index) * .5), 40px);
+}
+
+.font-size-0-45 {
+  font-size: clamp(12px, calc(var(--index) * .45), 40px);
+}
+
+.font-size-0-4 {
+  font-size: clamp(11px, calc(var(--index) * .4), 40px);
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+
+.top-margin-2 {
+  margin-top: calc(var(--index) * 2);
+}
+
+
+
+.modal-success-message {
+  position: fixed;
+  top: calc(var(--index) * .5);
+  right: calc(var(--index) * 1);
+  border: 1px solid #3F8837;
+  padding: calc(var(--index) * .8);
+  border-radius: calc(var(--index) * .3);
+  background: #E4FEE3;
+  overflow: hidden;
+}
+
+.modal-success-message::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #3F8837;
+  animation: message-bar 5s linear;
+}
+
+.modal-success-message p {
+  color: #3F8837;
+}
+
+@keyframes message-bar {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+
+
+
+@media (max-width: 1670px) { 
+  .content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1300px) { 
+  .content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) { 
+  .content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+    .main-title-for-section {
+        text-align: center;
+    }
+}

@@ -1,0 +1,88 @@
+.main-header {
+    padding: clamp(15px, calc(var(--index) * .3), 40px) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header-left a {
+    display: flex;
+    gap: calc(var(--index) * .5);
+    align-items: center;
+}
+
+.main-header-left a img {
+    width: clamp(190px, calc(var(--index) * 10), 400px);
+}
+
+.main-header-center {
+    display: flex;
+    gap: calc(var(--index) * .8);
+    align-items: center;
+}
+
+.main-header-center a:hover {
+    color: var(--main-color);
+    transition: .3s all ease;
+}
+
+.main-header-change-language {
+    display: flex;
+    gap: calc(var(--index) * .3);
+}
+
+.main-header-change-language button {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-header-change-language button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background: #000;
+    transition: all .2s ease;
+}
+
+.main-header-change-language button.active-change-lng-btn::before {
+    width: 100%;
+}
+
+
+
+
+
+.main-header-right svg {
+    display: none;
+}
+
+
+
+@media (max-width: 1170px) { 
+    .main-header-right svg {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: .2s all ease;
+
+        &:hover {
+            stroke: var(--main-color);
+            fill: var(--main-color);
+        }
+    }
+
+    .header-dfl-btn-container {
+        display: none;
+    }
+
+    .main-header-change-language,
+    .main-header-center {
+        display: none;
+    }
+}

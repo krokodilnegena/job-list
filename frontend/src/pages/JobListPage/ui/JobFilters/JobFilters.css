@@ -1,0 +1,22 @@
+.job-filters {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(7px, calc(var(--index) * .3), 20px);
+} 
+
+.reset-filters {
+    display: block;
+    width: 100%;
+    background: var(--main-color);
+    color: var(--white);
+    padding: clamp(10px, calc(var(--index) * .4), 40px) clamp(20px, calc(var(--index) * .5), 60px);
+    border-radius: calc(var(--index) * .5);
+    border: 1px solid var(--main-color);
+    transition: .3s all ease;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--white);
+        color: var(--main-color);
+    }
+}

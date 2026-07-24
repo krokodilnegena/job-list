@@ -1,0 +1,38 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1.5);
+}
+
+.contact-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, calc(var(--index) * .5), 50px);
+    width: 45%;
+}
+
+.contact-page-number {
+    display: flex;
+    gap: calc(var(--index) * .3);
+}
+
+.contact-marker {
+    color: var(--main-color);
+}
+
+.contact-mt {
+    margin-top: calc(var(--index) * .5);
+}
+
+
+@media (max-width: 980px) {
+    .contact-page-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .contact-page-number {
+       flex-direction: column;
+    }
+}

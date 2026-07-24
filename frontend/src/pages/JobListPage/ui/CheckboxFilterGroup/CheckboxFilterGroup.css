@@ -1,0 +1,68 @@
+.job-filters-checkbox-container {
+    padding: clamp(15px, calc(var(--index) * .4), 50px) clamp(12px, calc(var(--index) * .3), 40px);
+    border: 1px solid rgba(0,0,0, .2);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: calc(var(--index) * .3);
+    transition: gap .2s ease-out;
+}
+
+.job-filters-checkbox-container-title {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-filters-checkbox-container-title img {
+    width: 7px;
+    transition: .2s all ease;
+}
+
+.job-filters-checkbox-container.filter-checked .job-filters-checkbox-container-title img {
+    rotate: -90deg;
+    transition: .2s all ease;
+}
+
+
+.job-filters-checkbox-container-items {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * .2);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    transition:
+        max-height .2s ease-out,
+        opacity .2s ease-out,
+        margin-top .2s ease-out;
+}
+
+.job-filters-checkbox-container-items-label {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--index) * .3);
+    cursor: pointer;
+}
+
+.job-filters-checkbox-container-items-label input {
+    accent-color: var(--main-color);
+}
+
+.job-filters-checkbox-container.filter-checked .job-filters-checkbox-container-items {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: calc(var(--index) * .2);
+    transition:
+        max-height .2s ease-out,
+        opacity .2s ease-out,
+        margin-top .2s ease-out;
+}
+
+.job-filters-checkbox-container.filter-checked {
+    gap: calc(var(--index) * .3);
+    transition: gap .2s ease-out;
+}
